@@ -1,5 +1,5 @@
 $(document).ready(function() {
-var buttons = ["ROTFL" , "Tina Fey", "Big Bang Theory", "Innocent", "Kitty Cuddles", "Funny Animals", "SMH", "Wine", "tacos", "I Love You", "Puppy"];
+var buttons = ["ROTFL" , "Big Bang Theory", "Tina Fey", "Kittens", "Wine", "SMH", "Girl Please", "tacos", "Puppy", "SOS", "Coding", "Mr. Robot"];
 function displayGiphyButtons() {
 $("#giphyButtons").empty();
 for (var i = 0; i < buttons.length; i++) {
@@ -79,3 +79,4 @@ var giphyDiv = $("<div>");
 		}
 		});
 		});
+
