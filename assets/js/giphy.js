@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var buttons = ["ROTFL", "Sarcasm", "Big Bang Theory", "The Office", "Tina Fey", "Chandler Bing", "Kittens", "Wine", "SMH", "Girl Please", "tacos", "Puppy", "SOS", "Coding", "Mr. Robot"];
-
+    // display buttons from array
     function displayGiphyButtons() {
         $("#giphyButtons").empty();
         for (var i = 0; i < buttons.length; i++) {
@@ -12,7 +12,7 @@ $(document).ready(function() {
             $("#giphyButtons").append(gButton);
         }
     }
-
+    // Add new buttons from input field
     function addNewButton() {
         $("#addButton").on("click", function() {
             var newButton = $("#action-input").val().trim();
@@ -24,7 +24,7 @@ $(document).ready(function() {
             return false;
         });
     }
-
+    // remove user added buttons (not buttons from original array)
     function removeAddedButton() {
         $("#removeButton").on("click", function() {
             buttons.pop(newButton);
@@ -35,6 +35,7 @@ $(document).ready(function() {
         var subject = $(this).attr("data-name")
     });
 
+    // send request to giphy API and retrieve the information
     function showGiphs() {
         var action = $(this).attr("data-name");
         var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=dc6zaTOxFJmzC&limit=10";
@@ -53,7 +54,7 @@ $(document).ready(function() {
                 for (var i = 0; i < results.length; i++) {
                     var giphyDiv = $("<div>");
                     giphyDiv.addClass("giphDiv");
-                    var giphyRating = $("<p>").html("Rating: " + results[i].rating);
+                    var giphyRating = $("<p>").html("Rating: " + results[i].rating); //giphy's rating system
                     giphyDiv.append(giphyRating);
                     // insert Giphy images
                     var giphyImage = $("<img>");
@@ -67,9 +68,13 @@ $(document).ready(function() {
                 }
             });
     }
+
+    //call functions
     displayGiphyButtons();
     addNewButton();
     removeAddedButton();
+
+    // make giphy's still on load then animate on click
     $(document).on("click", ".action", showGiphs);
     $(document).on("click", ".image", function() {
         var state = $(this).attr('data-state');
