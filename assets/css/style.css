@@ -29,7 +29,7 @@ img {
 }
 
 img:hover {
-    border: 5px solid #735886;
+    border: 5px solid indigo;
     border-radius: 50%;
 }
 
