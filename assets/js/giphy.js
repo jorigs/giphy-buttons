@@ -1,5 +1,5 @@
 $(document).ready(function() {
-var buttons = ["ROTFL" , "Big Bang Theory", "Tina Fey", "Kittens", "Wine", "SMH", "Girl Please", "tacos", "Puppy", "SOS", "Coding", "Mr. Robot"];
+var buttons = ["ROTFL" , "Sarcasm", "Big Bang Theory", "The Office", "Tina Fey", "Chandler Bing", "Kittens", "Wine", "SMH", "Girl Please", "tacos", "Puppy", "SOS", "Coding", "Mr. Robot"];
 function displayGiphyButtons() {
 $("#giphyButtons").empty();
 for (var i = 0; i < buttons.length; i++) {

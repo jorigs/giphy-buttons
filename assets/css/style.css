@@ -1,93 +1,97 @@
 html {
-	position: relative;
-	min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
-body{
-    color: black;
+body {
     font-family: 'Abel', sans-serif;
-    /*height: 100%;
-    margin-bottom: 60px;*/
+    font-size: 16px;
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-#wrap{
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -60px;
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
 }
 
-img { 
+img {
     width: 250px;
     height: 150px;
-	margin-right: 10%;
-	margin-bottom: 5%;
-	display: inline-block;
-	border: 5px solid white;
-
+    margin-right: 10%;
+    margin-bottom: 5%;
+    display: inline-block;
+    border: 5px solid white;
 }
 
 img:hover {
-	border: 5px solid #735886;
+    border: 5px solid #735886;
+    border-radius: 50%;
 }
+
 .btn {
     background-color: #999999;
     border-color: #fff;
+    margin-top: 5px;
 }
+
 .btn:hover {
-	background-color:#735886;
+    background: -webkit-linear-gradient(left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: .8;
 }
+
 #viewGiphs {
     width: 100%;
 }
 
-.giphDiv{
-	float: left;
-	margin: 10px;
+.giphDiv {
+    float: left;
+    margin: 10px;
 }
+
 .container {
-	background-color: #fff;
-	padding: 20px;
+    background-color: #fff;
+    padding: 20px;
 }
+
 .jumbotron {
-    background-color: #735886;
+    background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
 }
-.jumbotron h1 {
+
+#header {
+    border-radius: 100px;
+}
+
+#header h1 {
+    color: indigo;
     text-align: center;
     font-family: 'Kumar One Outline', cursive;
 }
-#copyright{
-	font-size: 12px;
+
+#copyright {
+    font-size: 12px;
 }
 
 #push {
-	height: 150px;
+    height: 150px;
 }
 
 #footer .container {
-	background-color: #735886;
-	position: fixed;
-	bottom:0;
-	text-align: center;
-	width: 100%;
-	height:60px;
-	line-height: 20px;
-	color: white;
-	padding: 20px;
-	font-size: 16px;
+    background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    line-height: 20px;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
 }
-
-#giphy-display img {
-	
-
-}
-
-
-
-
-
-
