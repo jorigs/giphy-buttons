@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    var buttons = ["ROTFL", "Sarcasm", "Big Bang Theory", "The Office", "Tina Fey", "Chandler Bing", "Kittens", "Wine", "SMH", "Girl Please", "tacos", "Puppy", "SOS", "Coding", "Mr. Robot"];
+    var buttons = ["Sarcasm", "Big Bang Theory", "The Office", "Tina Fey", "Chandler Bing", "Kittens", "Wine", "SMH", "Girl Please", "tacos", "Puppy", "SOS", "Coding", "Mr. Robot"];
+    var newButton = "";
+
     // display buttons from array
     function displayGiphyButtons() {
         $("#giphyButtons").empty();
@@ -12,25 +14,37 @@ $(document).ready(function() {
             $("#giphyButtons").append(gButton);
         }
     }
-    // Add new buttons from input field
+
+
+
     function addNewButton() {
-        $("#addButton").on("click", function() {
             var newButton = $("#action-input").val().trim();
             if (newButton === "") {
                 return false;
             }
             buttons.push(newButton);
+            $("#action-input").val("");
             displayGiphyButtons();
             return false;
-        });
     }
+    		
+
+
+    // Add new buttons from input field
+    $("#addButton").on("click", addNewButton);
+
+
     // remove user added buttons (not buttons from original array)
+
     function removeAddedButton() {
-        $("#removeButton").on("click", function() {
-            buttons.pop(newButton);
+            buttons.pop();
             displayGiphyButtons();
-        });
+            return false;
+        
     }
+
+    $("#removeButton").on("click", removeAddedButton);
+
     $("button").on("click", function() {
         var subject = $(this).attr("data-name")
     });
